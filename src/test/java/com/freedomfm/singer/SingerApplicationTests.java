@@ -9,8 +9,8 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @SpringBootTest({
         "spring.datasource.url=jdbc:mysql://localhost:3306/freedom_fm_test?useSSL=false",
-        "spring.datasource.username=translator",
-        "spring.datasource.password=translator"
+        "spring.datasource.username=<your DB username>",
+        "spring.datasource.password=<your DB password>"
 })
 @AutoConfigureMockMvc
 public abstract class SingerApplicationTests {
