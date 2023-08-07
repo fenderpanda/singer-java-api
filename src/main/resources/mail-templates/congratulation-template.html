@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Freedom FM</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+        .main {
+            display: inline-block;
+        }
+        .fw-bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div>
+            <img th:attr="src=@{'cid:' + logo-freedom-fm}"
+                 width="200"
+                 alt="Freedom-FM-logo">
+            <p th:text="#{congratulation.first(${singer.name})}"></p>
+            <p>
+                <div class="main" th:text="#{congratulation.second} + ' '"></div>
+                <div class="main">
+                    <a class="fw-bold" th:href="${contest}" th:text="#{congratulation.link}"></a>
+                </div>
+            </p>
+            <p th:text="#{congratulation.third}"></p>
+            <p th:text="#{congratulation.fourth}"></p>
+            <p th:text="#{congratulation.fifth}"></p>
+        </div>
+        <div>
+            <a th:href="${facebook}">
+                <img th:attr="src=@{'cid:' + logo-facebook}"
+                     width="32"
+                     height="32"
+                     alt="logo-facebook">
+            </a>
+            <a th:href="${instagram}">
+                <img th:attr="src=@{'cid:' + logo-instagram}"
+                     width="32"
+                     height="32"
+                     alt="logo-instagram">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

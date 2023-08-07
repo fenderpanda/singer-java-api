@@ -1,0 +1,12 @@
+spring:
+  messages:
+    basename: i18n/errorMessages,i18n/mailMessages
+    encoding: UTF-8
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  thymeleaf:
+    prefix: classpath:/mail-templates/
